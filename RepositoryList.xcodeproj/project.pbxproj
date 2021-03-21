@@ -32,6 +32,7 @@
 		4B363C822607D47E008CBEAC /* BitBucketMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C812607D47E008CBEAC /* BitBucketMapper.swift */; };
 		4B363C852607D48A008CBEAC /* GitHubMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C842607D48A008CBEAC /* GitHubMapper.swift */; };
 		4B363C902607E840008CBEAC /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C8F2607E840008CBEAC /* FetchManager.swift */; };
+		4B363CA72607F717008CBEAC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363CA62607F717008CBEAC /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		4B363C812607D47E008CBEAC /* BitBucketMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketMapper.swift; sourceTree = "<group>"; };
 		4B363C842607D48A008CBEAC /* GitHubMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubMapper.swift; sourceTree = "<group>"; };
 		4B363C8F2607E840008CBEAC /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
+		4B363CA62607F717008CBEAC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				4B363C632607AAAB008CBEAC /* NSObject.swift */,
 				4B363C642607AAAB008CBEAC /* UIImageView.swift */,
 				4B363C652607AAAB008CBEAC /* UIStoryBoard.swift */,
+				4B363CA62607F717008CBEAC /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				4B363C682607AAAB008CBEAC /* UIStoryBoard.swift in Sources */,
 				4B363C902607E840008CBEAC /* FetchManager.swift in Sources */,
 				4B363C572607AA0E008CBEAC /* Router.swift in Sources */,
+				4B363CA72607F717008CBEAC /* UIColor.swift in Sources */,
 				4B363C762607B9AA008CBEAC /* ElementType.swift in Sources */,
 				4B363C542607AA0E008CBEAC /* NetworkError.swift in Sources */,
 				4B363C702607B377008CBEAC /* ElementCell.swift in Sources */,

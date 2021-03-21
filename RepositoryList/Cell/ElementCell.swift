@@ -22,6 +22,8 @@ class ElementCell: UITableViewCell {
                 guard let bitbucketURL = URL(string: bitbucket.avatarUrl) else { return }
                 avatarImageView.load(url: bitbucketURL)
                 
+                contentView.backgroundColor = .lightBlue
+                
             case .github(let github):
                 repoNameLabel.text = github.repoName
                 userNameLabel.text = github.userName
@@ -29,6 +31,8 @@ class ElementCell: UITableViewCell {
                 guard let githubURL = URL(string: github.avatarUrl) else { return }
                 avatarImageView.load(url: githubURL)
                 
+                contentView.backgroundColor = .lightYellow
+
             default:
                 return
             }

@@ -18,6 +18,5 @@ class ElementDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
 }

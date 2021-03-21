@@ -49,7 +49,6 @@ extension ElementsViewController: UITableViewDataSource {
         }
         cell.element = viewModel.elements[indexPath.row]
         
-
         return cell
     }
 }
