@@ -35,5 +35,3 @@ class ElementCell: UITableViewCell {
         }
     }
 }
-
-

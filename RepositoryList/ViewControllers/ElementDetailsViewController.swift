@@ -9,8 +9,9 @@ import UIKit
 
 class ElementDetailsViewController: UIViewController {
 
+    var element: ElementType?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }
