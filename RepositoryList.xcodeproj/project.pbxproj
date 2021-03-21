@@ -102,6 +102,7 @@
 				4B363C422607929C008CBEAC /* ResponseModels */,
 				4B363C5A2607AA1C008CBEAC /* Models */,
 				4B363C4E2607A9D6008CBEAC /* Networking */,
+				4B363C922607EE0F008CBEAC /* Managers */,
 				4B363C802607D466008CBEAC /* Mappers */,
 				4B363C622607AA90008CBEAC /* Extensions */,
 				4B363C8D2607DABB008CBEAC /* Enums */,
@@ -136,10 +137,9 @@
 			children = (
 				4B363C502607AA0E008CBEAC /* APIClient.swift */,
 				4B363C512607AA0E008CBEAC /* APIRouter.swift */,
-				4B363C532607AA0E008CBEAC /* ElementAPIClient.swift */,
 				4B363C4F2607AA0E008CBEAC /* NetworkError.swift */,
 				4B363C522607AA0E008CBEAC /* Router.swift */,
-				4B363C922607EE0F008CBEAC /* Managers */,
+				4B363C9D2607F06A008CBEAC /* Element */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -202,6 +202,14 @@
 				4B363C8F2607E840008CBEAC /* FetchManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		4B363C9D2607F06A008CBEAC /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				4B363C532607AA0E008CBEAC /* ElementAPIClient.swift */,
+			);
+			path = Element;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,17 +7,21 @@
 
 import Foundation
 
-class FetchManager {
-    static func fetch(viewModel: ElementsViewModel, completion: @escaping (Result<[ElementType], Error>) -> Void) {
+final class FetchManager {
+    func fetch(viewModel: ElementsViewModel, completion: @escaping (Result<[ElementType], Error>) -> Void) {
+        let elementApiClient = ElementAPIClient()
+
         let bitBucketMapper = BitBucketMapper()
         let gitHubMapper = GitHubMapper()
         var bitBucketModels: [BitBucketModel] = []
         var gitHubModels: [GitHubModel] = []
+        
         let loadingFailed = false
+        
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
-        ElementAPIClient.fetchBitbucketElements { result in
+        elementApiClient.fetchBitbucketElements { result in
             switch result {
             case .success(let bitbucketElements):
                 bitBucketModels = bitbucketElements.values.map {
@@ -30,7 +34,7 @@ class FetchManager {
         }
         
         dispatchGroup.enter()
-        ElementAPIClient.fetchGithubElements { result in
+        elementApiClient.fetchGithubElements { result in
             switch result {
             case .success(let githubElements):
                 gitHubModels = githubElements.map {
@@ -53,7 +57,6 @@ class FetchManager {
                 } + gitHubModels.map {
                     .github($0)
                 }
-                
                 completion(.success(elements))
             }
         }

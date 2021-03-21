@@ -10,7 +10,7 @@ import UIKit
 class ElementsViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
-    private let elementApiClient = ElementAPIClient()
+    private let fetchManager = FetchManager()
     
     var viewModel: ElementsViewModel = .empty
     
@@ -26,7 +26,7 @@ class ElementsViewController: UIViewController {
     }
     
     func fetchAllElements() {
-        FetchManager.fetch(viewModel: viewModel) { result in
+        fetchManager.fetch(viewModel: viewModel) { result in
             switch result {
             case .success(let elements):
                 self.viewModel.elements = elements
