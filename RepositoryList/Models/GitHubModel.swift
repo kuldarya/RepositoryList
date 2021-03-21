@@ -13,12 +13,3 @@ struct GitHubModel {
     let userName: String
     let avatarUrl: String
 }
-
-struct GitHubMapper {
-    static func map(_ model: GitHubResponseModel) -> GitHubModel {
-        return GitHubModel(repoName: model.repoName,
-                           repoDescription: model.repoDescription ?? "",
-                           userName: model.githubOwner.userName,
-                           avatarUrl: model.githubOwner.avatarURL)
-    }
-}

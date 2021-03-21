@@ -8,10 +8,12 @@
 import UIKit
 
 class ElementsViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     private let elementApiClient = ElementAPIClient()
-
+    
+    var viewModel: ElementsViewModel = .empty
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,11 @@ class ElementsViewController: UIViewController {
     }
     
     func fetch(completion: @escaping (Result<Any, Error>) -> Void) {
+        let bitBucketMapper = BitBucketMapper()
+        let gitHubMapper = GitHubMapper()
+        
+        var bitBucketModels: [BitBucketModel] = []
+        var gitHubModels: [GitHubModel] = []
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
@@ -39,7 +46,6 @@ class ElementsViewController: UIViewController {
             switch result {
             case .success(let bitbucketElements):
                 print("bitbucketElements successfully fethed")
-
 //                self.elements = bitbucketElements.values as [Any]
             case .failure(let error):
                 assertionFailure(error.localizedDescription)
@@ -54,7 +60,6 @@ class ElementsViewController: UIViewController {
             switch result {
             case .success(let githubElements):
                 print("githubElements successfully fethed")
-
 //                self.elements = githubElements as [Any]
             case .failure(let error):
                 assertionFailure(error.localizedDescription)

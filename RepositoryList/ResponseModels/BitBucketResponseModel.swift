@@ -8,10 +8,10 @@
 import Foundation
 
 struct BitBucketResponseModel: Codable {
-    let values: [Value]
+    let values: [BitBucketElementResponseModel]
 }
 
-struct Value: Codable {
+struct BitBucketElementResponseModel: Codable {
     let bitbucketOwner: BitBucketOwner
     let repoName: String
     let repoDescription: String
