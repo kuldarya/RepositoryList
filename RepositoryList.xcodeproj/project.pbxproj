@@ -27,6 +27,7 @@
 		4B363C682607AAAB008CBEAC /* UIStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C652607AAAB008CBEAC /* UIStoryBoard.swift */; };
 		4B363C6B2607AAEB008CBEAC /* ElementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C6A2607AAEB008CBEAC /* ElementDetailsViewController.swift */; };
 		4B363C702607B377008CBEAC /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C6F2607B377008CBEAC /* ElementCell.swift */; };
+		4B363C762607B9AA008CBEAC /* ElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C752607B9AA008CBEAC /* ElementType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		4B363C652607AAAB008CBEAC /* UIStoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryBoard.swift; sourceTree = "<group>"; };
 		4B363C6A2607AAEB008CBEAC /* ElementDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailsViewController.swift; sourceTree = "<group>"; };
 		4B363C6F2607B377008CBEAC /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
+		4B363C752607B9AA008CBEAC /* ElementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				4B363C5A2607AA1C008CBEAC /* Models */,
 				4B363C4E2607A9D6008CBEAC /* Networking */,
 				4B363C622607AA90008CBEAC /* Extensions */,
+				4B363C752607B9AA008CBEAC /* ElementType.swift */,
 				4B363C3226078F9B008CBEAC /* Main.storyboard */,
 				4B363C3526078F9E008CBEAC /* Assets.xcassets */,
 				4B363C3726078F9E008CBEAC /* LaunchScreen.storyboard */,
@@ -235,6 +238,7 @@
 				4B363C4826079608008CBEAC /* GitHubResponseModel.swift in Sources */,
 				4B363C682607AAAB008CBEAC /* UIStoryBoard.swift in Sources */,
 				4B363C572607AA0E008CBEAC /* Router.swift in Sources */,
+				4B363C762607B9AA008CBEAC /* ElementType.swift in Sources */,
 				4B363C542607AA0E008CBEAC /* NetworkError.swift in Sources */,
 				4B363C702607B377008CBEAC /* ElementCell.swift in Sources */,
 				4B363C582607AA0E008CBEAC /* ElementAPIClient.swift in Sources */,
