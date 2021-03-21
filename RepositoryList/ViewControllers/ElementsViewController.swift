@@ -8,7 +8,8 @@
 import UIKit
 
 class ElementsViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     private let elementApiClient = ElementAPIClient()
 
     override func viewDidLoad() {
@@ -63,10 +64,8 @@ class ElementsViewController: UIViewController {
         
         dispatchGroup.notify(queue: DispatchQueue.main) {
             print("all elements were successfully fetched")
-            
-//            self.tableView.reloadData()
+            self.tableView.reloadData()
         }
     }
-
 }
 
