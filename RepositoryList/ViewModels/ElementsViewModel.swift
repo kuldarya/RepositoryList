@@ -8,7 +8,7 @@
 import Foundation
 
 struct ElementsViewModel {
-    let elements: [ElementType]
+    var elements: [ElementType]
 }
 
 extension ElementsViewModel {

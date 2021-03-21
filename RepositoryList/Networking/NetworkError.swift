@@ -8,23 +8,13 @@
 import Foundation
 
 enum NetworkError: Error {
-    case timeoutError
-    case lostInternetConnection
-    case notConnectedToInternet
-    case cannotDecodeData
-    case cannotParseResponse(parseError: Error)
+    case unableToLoad
     case unknownError
     
     init(errorCode: Int) {
         switch errorCode {
-        case NSURLErrorTimedOut:
-            self = .timeoutError
-        case NSURLErrorNetworkConnectionLost:
-            self = .lostInternetConnection
-        case NSURLErrorNotConnectedToInternet:
-            self = .notConnectedToInternet
-        case NSURLErrorCannotDecodeRawData:
-            self = .cannotDecodeData
+        case NSURLErrorCannotLoadFromNetwork:
+            self = .unableToLoad
         default:
             self = .unknownError
         }
@@ -34,14 +24,8 @@ enum NetworkError: Error {
 extension NetworkError: LocalizedError {
     var errorDescription: String? {
         switch self {
-        case .timeoutError:
-            return "Request is timed out"
-        case .lostInternetConnection:
-            return "Internet Connection was lost"
-        case .notConnectedToInternet:
-            return "Check Internet connection"
-        case .cannotDecodeData:
-            return "Cannot get data"
+        case .unableToLoad:
+            return "Cannot load data"
         default:
             return "Something went wrong"
         }

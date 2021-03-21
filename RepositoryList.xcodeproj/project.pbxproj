@@ -31,6 +31,7 @@
 		4B363C7D2607D3E4008CBEAC /* ElementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C7C2607D3E4008CBEAC /* ElementsViewModel.swift */; };
 		4B363C822607D47E008CBEAC /* BitBucketMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C812607D47E008CBEAC /* BitBucketMapper.swift */; };
 		4B363C852607D48A008CBEAC /* GitHubMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C842607D48A008CBEAC /* GitHubMapper.swift */; };
+		4B363C902607E840008CBEAC /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C8F2607E840008CBEAC /* FetchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		4B363C7C2607D3E4008CBEAC /* ElementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsViewModel.swift; sourceTree = "<group>"; };
 		4B363C812607D47E008CBEAC /* BitBucketMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitBucketMapper.swift; sourceTree = "<group>"; };
 		4B363C842607D48A008CBEAC /* GitHubMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubMapper.swift; sourceTree = "<group>"; };
+		4B363C8F2607E840008CBEAC /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				4B363C532607AA0E008CBEAC /* ElementAPIClient.swift */,
 				4B363C4F2607AA0E008CBEAC /* NetworkError.swift */,
 				4B363C522607AA0E008CBEAC /* Router.swift */,
+				4B363C922607EE0F008CBEAC /* Managers */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -191,6 +194,14 @@
 				4B363C752607B9AA008CBEAC /* ElementType.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		4B363C922607EE0F008CBEAC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4B363C8F2607E840008CBEAC /* FetchManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +282,7 @@
 				4B363C4826079608008CBEAC /* GitHubResponseModel.swift in Sources */,
 				4B363C822607D47E008CBEAC /* BitBucketMapper.swift in Sources */,
 				4B363C682607AAAB008CBEAC /* UIStoryBoard.swift in Sources */,
+				4B363C902607E840008CBEAC /* FetchManager.swift in Sources */,
 				4B363C572607AA0E008CBEAC /* Router.swift in Sources */,
 				4B363C762607B9AA008CBEAC /* ElementType.swift in Sources */,
 				4B363C542607AA0E008CBEAC /* NetworkError.swift in Sources */,

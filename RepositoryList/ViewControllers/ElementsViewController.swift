@@ -26,62 +26,14 @@ class ElementsViewController: UIViewController {
     }
     
     func fetchAllElements() {
-        fetch { result in
+        FetchManager.fetch(viewModel: viewModel) { result in
             switch result {
-            case .success:
-                print("successfully loaded")
+            case .success(let elements):
+                self.viewModel.elements = elements
+                self.tableView.reloadData()
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
-        }
-    }
-    
-    func fetch(completion: @escaping (Result<Any, Error>) -> Void) {
-        let bitBucketMapper = BitBucketMapper()
-        let gitHubMapper = GitHubMapper()
-        
-        var bitBucketModels: [BitBucketModel] = []
-        var gitHubModels: [GitHubModel] = []
-        
-        let dispatchGroup = DispatchGroup()
-        
-        dispatchGroup.enter()
-        elementApiClient.fetchBitbucketElements { result in
-            switch result {
-            case .success(let bitbucketElements):
-                bitBucketModels = bitbucketElements.values.map {
-                    bitBucketMapper.map($0)
-                }
-            case .failure(let error):
-                assertionFailure(error.localizedDescription)
-            }
-            dispatchGroup.leave()
-        }
-        
-        dispatchGroup.enter()
-        elementApiClient.fetchGithubElements { result in
-            switch result {
-            case .success(let githubElements):
-                gitHubModels = githubElements.map {
-                    gitHubMapper.map($0)
-                }
-            case .failure(let error):
-                assertionFailure(error.localizedDescription)
-            }
-            dispatchGroup.leave()
-        }
-        
-        dispatchGroup.notify(queue: DispatchQueue.main) { [weak self] in
-            guard let self = self else { return }
-            
-            let elements: [ElementType] = bitBucketModels.map {
-                .bitbucket($0)
-            } + gitHubModels.map {
-                .github($0)
-            }
-            
-            self.viewModel = ElementsViewModel(elements: elements)
-            self.tableView.reloadData()
         }
     }
 }
@@ -96,6 +48,8 @@ extension ElementsViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.element = viewModel.elements[indexPath.row]
+        
+
         return cell
     }
 }
