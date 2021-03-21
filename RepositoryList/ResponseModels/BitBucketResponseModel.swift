@@ -28,7 +28,7 @@ struct BitBucketOwner: Codable {
     let links: Links
     
     private enum CodingKeys: String, CodingKey {
-        case userName = "displayName"
+        case userName = "display_name"
         case links
     }
 }

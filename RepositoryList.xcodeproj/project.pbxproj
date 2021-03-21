@@ -26,6 +26,7 @@
 		4B363C672607AAAB008CBEAC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C642607AAAB008CBEAC /* UIImageView.swift */; };
 		4B363C682607AAAB008CBEAC /* UIStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C652607AAAB008CBEAC /* UIStoryBoard.swift */; };
 		4B363C6B2607AAEB008CBEAC /* ElementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C6A2607AAEB008CBEAC /* ElementDetailsViewController.swift */; };
+		4B363C702607B377008CBEAC /* ElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C6F2607B377008CBEAC /* ElementCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		4B363C642607AAAB008CBEAC /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		4B363C652607AAAB008CBEAC /* UIStoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryBoard.swift; sourceTree = "<group>"; };
 		4B363C6A2607AAEB008CBEAC /* ElementDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailsViewController.swift; sourceTree = "<group>"; };
+		4B363C6F2607B377008CBEAC /* ElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				4B363C2C26078F9B008CBEAC /* AppDelegate.swift */,
 				4B363C2E26078F9B008CBEAC /* SceneDelegate.swift */,
+				4B363C6E2607B35D008CBEAC /* Cell */,
 				4B363C4D2607A9C4008CBEAC /* ViewControllers */,
 				4B363C422607929C008CBEAC /* ResponseModels */,
 				4B363C5A2607AA1C008CBEAC /* Models */,
@@ -144,6 +147,14 @@
 				4B363C652607AAAB008CBEAC /* UIStoryBoard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4B363C6E2607B35D008CBEAC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4B363C6F2607B377008CBEAC /* ElementCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 				4B363C682607AAAB008CBEAC /* UIStoryBoard.swift in Sources */,
 				4B363C572607AA0E008CBEAC /* Router.swift in Sources */,
 				4B363C542607AA0E008CBEAC /* NetworkError.swift in Sources */,
+				4B363C702607B377008CBEAC /* ElementCell.swift in Sources */,
 				4B363C582607AA0E008CBEAC /* ElementAPIClient.swift in Sources */,
 				4B363C662607AAAB008CBEAC /* NSObject.swift in Sources */,
 				4B363C602607AA81008CBEAC /* GitHubModel.swift in Sources */,
