@@ -8,6 +8,6 @@
 import Foundation
 
 enum ElementType {
-    case bitbucket(type: BitBucketModel)
-    case github(type: GitHubModel)
+    case bitbucket(BitBucketModel)
+    case github(GitHubModel)
 }

@@ -40,13 +40,12 @@ class ElementsViewController: UIViewController {
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
-        elementApiClient.fetchBitbucketElements { [weak self] result in
-            guard let self = self else { return }
-
+        elementApiClient.fetchBitbucketElements { result in
             switch result {
             case .success(let bitbucketElements):
-                print("bitbucketElements successfully fethed")
-//                self.elements = bitbucketElements.values as [Any]
+                bitBucketModels = bitbucketElements.values.map {
+                    bitBucketMapper.map($0)
+                }
             case .failure(let error):
                 assertionFailure(error.localizedDescription)
             }
@@ -54,21 +53,28 @@ class ElementsViewController: UIViewController {
         }
         
         dispatchGroup.enter()
-        elementApiClient.fetchGithubElements { [weak self] result in
-            guard let self = self else { return }
-            
+        elementApiClient.fetchGithubElements { result in
             switch result {
             case .success(let githubElements):
-                print("githubElements successfully fethed")
-//                self.elements = githubElements as [Any]
+                gitHubModels = githubElements.map {
+                    gitHubMapper.map($0)
+                }
             case .failure(let error):
                 assertionFailure(error.localizedDescription)
             }
             dispatchGroup.leave()
         }
         
-        dispatchGroup.notify(queue: DispatchQueue.main) {
-            print("all elements were successfully fetched")
+        dispatchGroup.notify(queue: DispatchQueue.main) { [weak self] in
+            guard let self = self else { return }
+            
+            let elements: [ElementType] = bitBucketModels.map {
+                .bitbucket($0)
+            } + gitHubModels.map {
+                .github($0)
+            }
+            
+            self.viewModel = ElementsViewModel(elements: elements)
             self.tableView.reloadData()
         }
     }
