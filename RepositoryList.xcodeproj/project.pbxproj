@@ -25,6 +25,7 @@
 		4B363C662607AAAB008CBEAC /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C632607AAAB008CBEAC /* NSObject.swift */; };
 		4B363C672607AAAB008CBEAC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C642607AAAB008CBEAC /* UIImageView.swift */; };
 		4B363C682607AAAB008CBEAC /* UIStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C652607AAAB008CBEAC /* UIStoryBoard.swift */; };
+		4B363C6B2607AAEB008CBEAC /* ElementDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B363C6A2607AAEB008CBEAC /* ElementDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		4B363C632607AAAB008CBEAC /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		4B363C642607AAAB008CBEAC /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		4B363C652607AAAB008CBEAC /* UIStoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryBoard.swift; sourceTree = "<group>"; };
+		4B363C6A2607AAEB008CBEAC /* ElementDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				4B363C3026078F9B008CBEAC /* ElementsViewController.swift */,
+				4B363C6A2607AAEB008CBEAC /* ElementDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				4B363C582607AA0E008CBEAC /* ElementAPIClient.swift in Sources */,
 				4B363C662607AAAB008CBEAC /* NSObject.swift in Sources */,
 				4B363C602607AA81008CBEAC /* GitHubModel.swift in Sources */,
+				4B363C6B2607AAEB008CBEAC /* ElementDetailsViewController.swift in Sources */,
 				4B363C562607AA0E008CBEAC /* APIRouter.swift in Sources */,
 				4B363C2D26078F9B008CBEAC /* AppDelegate.swift in Sources */,
 				4B363C2F26078F9B008CBEAC /* SceneDelegate.swift in Sources */,
